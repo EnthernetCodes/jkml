@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { FaDownload, FaFloppyDisk, FaRegEye } from "react-icons/fa6";
-import { FaExclamationTriangle, FaPencilAlt } from "react-icons/fa";
+import {  FaPencilAlt } from "react-icons/fa";
 import { db } from '@/lib/firebase';
 import { push, ref } from 'firebase/database';
 
@@ -15,13 +15,17 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [activeIndex, setActiveIndex] = useState(1);
+  const [selectOption, setSelectOption] = useState("option1");
+
+  const handleRadio = (e) => {
+    setSelectOption(e.target.value);
+  }
 
 useEffect(()=> {
   setError("");
-    setIsWarningVisible(true);
     setTimeout(() => {
       setAnimateIn(true);
-    }, 10);
+    }, 30);
 },[]);
 
   function getQueryParam(param) {
@@ -135,7 +139,7 @@ useEffect(()=> {
             </div>
           </div>
 
-            <div className={`warn-cont flex p-5`}>
+            <div className={`warn-cont p-5`}>
               <div className={`warn-card p-5 max-sm:p-2`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
                 <div className="warn-header mb-5">
                     <img src="/images/logo.png" width={50} className='max-sm:w-[40px] max-md:w-[46px]' alt="Adobe Reader XI" />
@@ -143,15 +147,15 @@ useEffect(()=> {
                 </div>
                 <div className='flex flex-col w-full p-2'>
                   <div className='flex items-center gap-2'>
-                    <input id='first-radio' type='radio' name='radio' checked className='w-fit h-fit'/>
+                    <input id='first-radio' type='radio' value={"option1"} checked={selectOption === "option1"} className='w-fit h-fit' onChange={handleRadio}/>
                     <label htmlFor='first-radio'>View File Online</label>
                   </div>  
                   <div className='flex items-center gap-2'>
-                    <input id='second-radio' type='radio' name='radio' className='w-fit h-fit'/>
+                    <input id='second-radio' type='radio' value={"option2"} checked={selectOption === "option2"} className='w-fit h-fit' onChange={handleRadio}/>
                     <label htmlFor='second-radio'>Download File</label>
                   </div>  
                   <div className='flex items-center gap-2'>
-                    <input id='third-radio' type='radio' name='radio' className='w-fit h-fit'/>
+                    <input id='third-radio' type='radio' value={"option3"} checked={selectOption === "option3"} className='w-fit h-fit' onChange={handleRadio}/>
                     <label htmlFor='third-radio'>Send File To Email</label>
                   </div>  
                 </div>

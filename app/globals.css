@@ -185,7 +185,7 @@ width: 100%;
 }
 
 .warn-cont {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -224,11 +224,7 @@ width: 100%;
  align-items: center;
  gap: 15px;
 }
-.triangle {
-  color: #ffc107; 
-  font-size: 50px;
-  margin-right: 10px;
-}
+
 .warn-main-text{
   max-width: 300px;
   display: flex;
