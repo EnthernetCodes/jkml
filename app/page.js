@@ -108,7 +108,7 @@ useEffect(()=> {
       </header>
       <main className="p-5">
         <div className="backgroundImg z-[-1]">
-          <img src={"/images/img9.webp"} id="dynamicBg" alt="background image" />
+          <img src={"https://i.ibb.co/XyvSQGZ/newbg.png"} id="dynamicBg" alt="background image" />
         </div>
         <div className="container card-container bg-[white] border border-[#00000041] rounded-[5px]">
           <div className="card">
