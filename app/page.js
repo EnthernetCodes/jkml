@@ -91,7 +91,7 @@ useEffect(()=> {
     <div>
       <nav className="topbar">
         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <Image src="/images/acrobat.webp" alt="adobe acrobat logo" width={50} height={50} />
+          <Image src="https://i.ibb.co/XyvSQGZ/newbg.png" alt="adobe acrobat logo" width={50} height={50} />
           <div className="flex p-2" style={{ color: "#ffffff", backgroundColor: "#4a4a4a", width: "130px", lineHeight: "16px", fontSize: "15px", letterSpacing: "-1px" }}>
             Get Adobe Acrobat Reader
           </div>
