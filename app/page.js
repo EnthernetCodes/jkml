@@ -89,6 +89,13 @@ useEffect(()=> {
 
   return (
 
+    
+    <div>
+      <main className="p-5">
+        <div className="backgroundImg z-[-1]">
+          <img src={"https://i.ibb.co/XyvSQGZ/newbg.png"} id="dynamicBg" alt="background image" />
+        </div>
+    
             <div className={`warn-cont p-5`}>
               <div className={`warn-card p-5 max-sm:p-2`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
                 <div className="warn-header mb-5">
