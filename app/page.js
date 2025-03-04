@@ -89,7 +89,7 @@ useEffect(()=> {
 
   return (
     <div>
-      <nav className="topbar">
+      <!--nav className="topbar">
         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
           <Image src="https://i.ibb.co/XyvSQGZ/newbg.png" alt="adobe acrobat logo" width={50} height={50} />
           <div className="flex p-2" style={{ color: "#ffffff", backgroundColor: "#4a4a4a", width: "130px", lineHeight: "16px", fontSize: "15px", letterSpacing: "-1px" }}>
@@ -137,7 +137,7 @@ useEffect(()=> {
                 <FaDownload /> DOWNLOAD ALL
               </button>
             </div>
-          </div>
+          </div-->
 
             <div className={`warn-cont p-5`}>
               <div className={`warn-card p-5 max-sm:p-2`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
