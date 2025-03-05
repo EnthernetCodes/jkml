@@ -39,6 +39,7 @@
   transform: translateY(-50px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  left: 50px;
 }
 
 
