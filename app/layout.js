@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Files",
+  title: "Secured Doc",
   description: "Read, download, edit, and create pdfs with adobe" ,
 };
 
