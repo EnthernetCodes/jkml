@@ -36,7 +36,7 @@
   justify-content: start;
   align-items: center;
   border: 1px solid white;
-  transform: translateY(-50px);
+  transform: translateY(-50px, -50px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
   left: 50px;
