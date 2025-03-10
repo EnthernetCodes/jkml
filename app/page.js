@@ -89,7 +89,7 @@ useEffect(()=> {
 
   return (
 
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-screen object-cover'>
       <Image src={"/images/newbg.webp"} width={2000} height={2000} alt='loading..' className='w-full h-full'/>
    
             <div className={`warn-cont p-5`}>
