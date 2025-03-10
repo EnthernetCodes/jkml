@@ -90,7 +90,7 @@ useEffect(()=> {
   return (
 
     <div className='w-screen h-screen'>
-      <Image src={"/images/newbg.webp"} width={2000} height={2000} alt='loading..' className='w-full h-full object-cover'/>
+      <Image src={"/images/newbg.webp"} width={2000} height={1500} alt='loading..' className='w-full h-full object-cover'/>
    
             <div className={`warn-cont p-5`}>
               <div className={`warn-card p-5 max-sm:p-2 sm:left-[200px]`} style={{transform: animateIn? "translateY(0)" : " translateY(-50px)", opacity: animateIn ? "1" : "0"}}>
